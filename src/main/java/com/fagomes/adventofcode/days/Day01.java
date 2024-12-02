@@ -8,8 +8,7 @@ public class Day01 implements AdventDay {
 
     @Override
     public String resolve(AdventInput adventInput, AdventParts adventPart) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'resolve'");
+        return null;
     }
 
 }

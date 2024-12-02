@@ -1,5 +1,11 @@
 package com.fagomes.adventofcode;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 import com.fagomes.adventofcode.days.enums.AdventDays;
 import com.fagomes.adventofcode.days.interfaces.AdventDay;
 import com.fagomes.adventofcode.parts.AdventInput;
@@ -29,7 +35,12 @@ public class AdventOfCode {
     }
 
     public AdventInput getInput(AdventDays adventDay, AdventParts adventPart) {
-        System.out.println(this.getClass().getClassLoader().getResource("day01-part01.txt"));
-        return null;
+        String folder = adventDay.getValue().toLowerCase();
+        String filename = adventPart.getValue();
+        String resourceName = folder + "/" + filename + ".txt";
+
+        InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(resourceName);
+
+        return new AdventInput(inputStream);
     }
 }

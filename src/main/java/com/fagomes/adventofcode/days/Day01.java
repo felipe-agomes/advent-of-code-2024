@@ -8,6 +8,10 @@ public class Day01 implements AdventDay {
 
     @Override
     public String resolve(AdventInput adventInput, AdventParts adventPart) {
+        String input = adventInput.getFullContent();
+
+        System.out.println(input);
+
         return null;
     }
 

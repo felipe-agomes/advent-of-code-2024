@@ -17,16 +17,21 @@ public class AdventInput {
 
         BufferedReader reader = new BufferedReader(inputReader);
 
-        String fullContent = "";
+        StringBuilder fullContent = new StringBuilder();
         String line;
+
         try {
             while ((line = reader.readLine()) != null) {
-                fullContent += line + "\n";
+                fullContent.append(line).append("\n");
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return fullContent;
+        if (fullContent.length() > 0) {
+            fullContent.setLength(fullContent.length() - 1);
+        }
+
+        return fullContent.toString();
     }
 }

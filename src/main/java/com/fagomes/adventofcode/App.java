@@ -9,9 +9,12 @@ public class App {
     public static void main(String[] args) {
         AdventOfCode adventOfCode = new AdventOfCode();
 
-        AdventDay adventDay = adventOfCode.getDay(AdventDays.DAY_01);
-        AdventInput adventInput = adventOfCode.getInput(AdventDays.DAY_01, AdventParts.PART_1);
+        AdventDays day = AdventDays.DAY_01;
+        AdventParts part = AdventParts.PART_01_TEST;
 
-        System.out.println(adventDay.resolve(adventInput, AdventParts.PART_1));
+        AdventDay adventDay = adventOfCode.getDay(day);
+        AdventInput adventInput = adventOfCode.getInput(day, part);
+
+        System.out.println(adventDay.resolve(adventInput, part));
     }
 }

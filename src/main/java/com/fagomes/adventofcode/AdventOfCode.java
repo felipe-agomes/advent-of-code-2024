@@ -1,10 +1,6 @@
 package com.fagomes.adventofcode;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 
 import com.fagomes.adventofcode.days.enums.AdventDays;
 import com.fagomes.adventofcode.days.interfaces.AdventDay;
@@ -26,11 +22,9 @@ public class AdventOfCode {
 
             return (AdventDay) clazz.getConstructor().newInstance();
         } catch (ClassNotFoundException e) {
-            // throw new IllegalArgumentException("Dia não encontrado: " + adventDay, e);
-            throw new IllegalArgumentException("Dia não encontrado: ", e);
+            throw new IllegalArgumentException("Dia não encontrado: " + adventDay, e);
         } catch (ReflectiveOperationException e) {
-            // throw new RuntimeException("Erro ao criar a instância do dia: " + adventDay, e);
-            throw new RuntimeException("Dia não encontrado: ", e);
+            throw new RuntimeException("Dia não encontrado: " + adventDay, e);
         }
     }
 

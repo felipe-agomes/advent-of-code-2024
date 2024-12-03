@@ -34,4 +34,8 @@ public class AdventInput {
 
         return fullContent.toString();
     }
+
+    public String[] getLines() {
+        return this.getFullContent().split("\n");
+    }
 }

@@ -10,7 +10,7 @@ public class App {
         AdventOfCode adventOfCode = new AdventOfCode();
 
         AdventDays day = AdventDays.DAY_01;
-        AdventParts part = AdventParts.PART_01;
+        AdventParts part = AdventParts.PART_02;
 
         AdventDay adventDay = adventOfCode.getDay(day);
         AdventInput adventInput = adventOfCode.getInput(day, part);
